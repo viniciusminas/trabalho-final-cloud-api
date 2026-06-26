@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "nome": "Servidor Web",
+    "categoria": "Computação",
+    "descricao": "Responsável por hospedar a interface pública do pequeno e-commerce.",
+    "tecnologia_sugerida": "Nginx ou Apache",
+    "provedor_sugerido": "AWS EC2",
+    "criticidade": "Alta",
+    "status": "ativo"
+  },
+  {
+    "id": 2,
+    "nome": "API Backend",
+    "categoria": "Aplicação",
+    "descricao": "Camada responsável pelas regras de negócio e comunicação entre frontend e dados.",
+    "tecnologia_sugerida": "FastAPI, Node.js ou Spring Boot",
+    "provedor_sugerido": "AWS EC2 ou ECS",
+    "criticidade": "Alta",
+    "status": "ativo"
+  },
+  {
+    "id": 3,
+    "nome": "Banco de Dados",
+    "categoria": "Dados",
+    "descricao": "Armazena produtos, clientes, pedidos e informações operacionais do e-commerce.",
+    "tecnologia_sugerida": "PostgreSQL",
+    "provedor_sugerido": "Amazon RDS",
+    "criticidade": "Alta",
+    "status": "ativo"
+  },
+  {
+    "id": 4,
+    "nome": "Armazenamento de Imagens",
+    "categoria": "Storage",
+    "descricao": "Armazena imagens dos produtos exibidos na loja virtual.",
+    "tecnologia_sugerida": "Object Storage",
+    "provedor_sugerido": "Amazon S3",
+    "criticidade": "Média",
+    "status": "planejado"
+  },
+  {
+    "id": 5,
+    "nome": "Balanceador de Carga",
+    "categoria": "Rede",
+    "descricao": "Distribui requisições entre instâncias da aplicação para aumentar disponibilidade.",
+    "tecnologia_sugerida": "Load Balancer",
+    "provedor_sugerido": "AWS Elastic Load Balancing",
+    "criticidade": "Média",
+    "status": "planejado"
+  },
+  {
+    "id": 6,
+    "nome": "Backup Automatizado",
+    "categoria": "Segurança",
+    "descricao": "Realiza cópias periódicas dos dados para reduzir risco de perda de informações.",
+    "tecnologia_sugerida": "Snapshots e scripts de backup",
+    "provedor_sugerido": "AWS Backup",
+    "criticidade": "Alta",
+    "status": "ativo"
+  },
+  {
+    "id": 7,
+    "nome": "Monitoramento",
+    "categoria": "Observabilidade",
+    "descricao": "Acompanha disponibilidade, consumo de recursos e possíveis falhas da aplicação.",
+    "tecnologia_sugerida": "CloudWatch, Prometheus ou Grafana",
+    "provedor_sugerido": "Amazon CloudWatch",
+    "criticidade": "Alta",
+    "status": "ativo"
+  },
+  {
+    "id": 8,
+    "nome": "Pipeline de Integração Contínua",
+    "categoria": "DevOps",
+    "descricao": "Executa verificações automáticas a cada alteração enviada ao repositório.",
+    "tecnologia_sugerida": "GitHub Actions",
+    "provedor_sugerido": "GitHub",
+    "criticidade": "Alta",
+    "status": "ativo"
+  },
+  {
+    "id": 9,
+    "nome": "DNS",
+    "categoria": "Rede",
+    "descricao": "Permite acessar o e-commerce por meio de um domínio amigável.",
+    "tecnologia_sugerida": "Gerenciamento de zona DNS",
+    "provedor_sugerido": "Amazon Route 53",
+    "criticidade": "Média",
+    "status": "planejado"
+  },
+  {
+    "id": 10,
+    "nome": "CDN",
+    "categoria": "Performance",
+    "descricao": "Distribui conteúdo estático em pontos geograficamente próximos aos usuários.",
+    "tecnologia_sugerida": "Content Delivery Network",
+    "provedor_sugerido": "Amazon CloudFront",
+    "criticidade": "Média",
+    "status": "planejado"
+  }
+]
