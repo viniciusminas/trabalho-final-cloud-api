@@ -1,0 +1,40 @@
+name: CI - Testes da API
+
+# Executa o pipeline automaticamente sempre que houver push ou pull request
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Baixa o código do repositório para dentro do ambiente do GitHub Actions
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # Configura a versão do Python utilizada no projeto
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # Instala as dependências necessárias para executar a API, os testes e o lint
+      - name: Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Executa uma análise estática simples no código usando Ruff
+      # Esta etapa foi adicionada além dos testes unitários
+      - name: Executar lint com Ruff
+        run: |
+          ruff check .
+
+      # Executa os testes unitários da API
+      - name: Executar testes unitários
+        run: |
+          python -m pytest
